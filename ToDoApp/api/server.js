@@ -6,7 +6,7 @@ const multer = require("multer");
 var app = Express();
 app.use(cors());
 
-var CONNECTION_STRING = "mongodb+srv://chriswang429:WebDevFinal@cluster0.tmmrbd3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+var CONNECTION_STRING = "mongodb+srv://dbUser:dbpassword@cluster0.ggqduhu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
 var DATABASENAME = "ToDoAppDB";
 var database;
