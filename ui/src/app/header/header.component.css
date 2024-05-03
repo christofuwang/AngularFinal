@@ -1,0 +1,7 @@
+.header {
+    background-color: #ffffff; /* Header background color */
+    color: #000000; /* Black text color */
+    padding: 20px; /* Padding around the header content */
+    font-size: 20px; /* Font size of the header text */
+    font-weight: bold; /* Bold font weight for the header text */
+  }
