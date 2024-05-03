@@ -8,7 +8,7 @@ app.use(cors());
 
 var CONNECTION_STRING = "mongodb+srv://dbUser:dbpassword@cluster0.ggqduhu.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-var DATABASENAME = "ToDoAppDB";
+var DATABASENAME = "todoappdb";
 var database;
 
 app.listen(5038, ()=>{
@@ -19,14 +19,14 @@ app.listen(5038, ()=>{
 })
 
 app.get('/api/todoapp/GetNotes',(request,response)=>{
-    database.collection("ToDoAppCollection").find({}).toArray((error,result)=>{
+    database.collection("todoappcollection").find({}).toArray((error,result)=>{
         response.send(result);
     })
 })
 
 app.post('/api/todoapp/AddNotes',multer().none(),(request,response)=>{
-    database.collection("ToDoAppCollection").count({}, function(error,numOfDocs){
-        database.collection("ToDoAppCollection").insertOne({
+    database.collection("todoappcollection").count({}, function(error,numOfDocs){
+        database.collection("todoappcollection").insertOne({
             id:(numOfDocs+1).toString(),
             description:request.body.newNotes
         });
@@ -35,7 +35,7 @@ app.post('/api/todoapp/AddNotes',multer().none(),(request,response)=>{
 })
 
 app.delete('/api/todoapp/DeleteNotes',(request,response)=>{
-    database.collection("ToDoAppCollection").deleteOne({
+    database.collection("todoappcollection").deleteOne({
         id:request.query.id
     });
     response.json("Delete Successfully");
