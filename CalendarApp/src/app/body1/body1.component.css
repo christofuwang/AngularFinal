@@ -1,21 +1,27 @@
-/* body1.component.css */
-table {
-    border-collapse: collapse;
-  }
-  
-  td {
-    border: 1px solid #ccc;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    cursor: pointer;
-  }
-  
-  .active {
-    background-color: red;
-    color: white;
-  }
-  
-  /* body2.component.css */
-  /* Add your own styles as needed */
-  
+body, html {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff6347; /* Light grey background */
+}
+
+.week-container {
+  display: flex;
+  width: 95%;
+  height: 95%; /* Adjusted to 3/4 of the viewport height */
+}
+
+.day {
+  flex: 1; /* Ensures each day takes equal width */
+  background-color: #FFFFFF; /* Light blue color */
+  border: 2px solid #000; /* Black border around each day */
+  display: flex;
+  align-items: flex-start; /* Aligns the day name to the top */
+  justify-content: center;
+  padding-top: 10px; /* Padding at the top to space the day name */
+  color: #000; /* Black text color */
+  font-size: 20px; /* Larger text for visibility */
+}

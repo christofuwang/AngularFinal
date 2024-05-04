@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './header/header.component';
 import { Body1Component } from './body1/body1.component';
 import { Body2Component } from './body2/body2.component';
+import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HeaderComponent,
     Body1Component,
-    Body2Component
+    FooterComponent,
+    Body2Component,
   ],
   imports: [
     BrowserModule,

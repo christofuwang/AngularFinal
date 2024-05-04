@@ -1,3 +1,25 @@
 <!-- body2.component.html -->
-<div *ngIf="selectedDay">You clicked on {{ selectedDay }}</div>
+<div class="input">
+
+  <div class="options">
+    <select id="dayOfWeek">
+      <option value="sunday">Sunday</option>
+      <option value="monday">Monday</option>
+      <option value="tuesday">Tuesday</option>
+      <option value="wednesday">Wednesday</option>
+      <option value="thursday">Thursday</option>
+      <option value="friday">Friday</option>
+      <option value="saturday">Saturday</option>
+    </select>
+
+    <input id="newNotes" placeholder="Task...">
+  </div>
+  <br>
+  <button (click)="addNotes()">Add Task</button>
+</div>
+
+<h3 *ngFor="let note of notes">
+  <b>* {{note.description}}</b>
+  <button (click)="deleteNotes(note.id)">Delete Notes</button>
+</h3>
 

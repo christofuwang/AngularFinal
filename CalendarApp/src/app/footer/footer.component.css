@@ -1,11 +1,9 @@
 /* header.component.css */
 :host {
   display: block;
-  height: 20vh; /* This sets the height to 1/5 of the viewport height */
   background-color: #ff6347; /* Vibrant red color */
   width: 100vw; /* Ensures full viewport width */
-  margin: 0; /* Remove any margins */
-  padding: 0; /* Remove any padding */
+  height: 90px;
   box-sizing: border-box; /* Include padding and border in width and height */
   position: relative; /* Ensures the header is positioned relative to its normal position */
   left: 50%; /* Push it to the right by half of its own width */
@@ -13,10 +11,10 @@
   transform: translateX(-50%); /* Offset by negative half of its own width to center exactly */
 }
 
-h1 {
+h2 {
+  margin-top: 10px;
   text-align: center; /* Centers text horizontally */
   margin: 0; /* Removes default margin */
   padding: 0; /* Removes default padding */
-  line-height: 20vh; /* Aligns text vertically */
   color: white; /* White text for contrast */
 }

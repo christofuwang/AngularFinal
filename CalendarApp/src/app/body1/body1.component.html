@@ -1,23 +1,15 @@
 <!-- body1.component.html -->
+<body>
+    <div class="week-container">
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+    </div>
+</body>
 
-<table>
-    <thead>
-      <tr>
-        <th>Sun</th>
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let week of calendar">
-        <td *ngFor="let day of week" (click)="toggleDay(day)">
-          <div [ngClass]="{'active': day.active}">{{ day.date }}</div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  
+
+
