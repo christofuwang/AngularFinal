@@ -25,10 +25,12 @@ app.get('/api/todoapp/GetNotes',(request,response)=>{
 })
 
 app.post('/api/todoapp/AddNotes',multer().none(),(request,response)=>{
+
     database.collection("todoappcollection").count({}, function(error,numOfDocs){
         database.collection("todoappcollection").insertOne({
             id:(numOfDocs+1).toString(),
-            description:request.body.newNotes
+            description:request.body.newNotes,
+            day:request.body.dayOfWeek
         });
         response.json("Added Successfully");
     })

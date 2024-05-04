@@ -5,23 +5,48 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ff6347; /* Light grey background */
+  background-color: #ff6347; /* Energetic red background, corrected comment */
 }
 
 .week-container {
   display: flex;
   width: 95%;
-  height: 95%; /* Adjusted to 3/4 of the viewport height */
+  height: 95%; /* Adjusts height to fill 95% of the viewport */
 }
 
 .day {
-  flex: 1; /* Ensures each day takes equal width */
-  background-color: #FFFFFF; /* Light blue color */
+  flex: 1; /* Distributes width evenly */
+  background-color: #FFFFFF; /* White background, corrected comment */
   border: 2px solid #000; /* Black border around each day */
   display: flex;
-  align-items: flex-start; /* Aligns the day name to the top */
-  justify-content: center;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align items for the title */
   padding-top: 10px; /* Padding at the top to space the day name */
   color: #000; /* Black text color */
-  font-size: 20px; /* Larger text for visibility */
+  font-size: 20px; /* Larger font size for visibility */
+}
+
+.day h3 {
+  width: 100%; /* Ensure the title stretches across the day div */
+  margin: 0;
+  padding: 5px 0;
+  text-align: center; /* Center the day titles */
+  color: #333; /* Dark grey color for the text */
+}
+
+.day ul {
+  width: 100%; /* Ensures ul fills the day div */
+  list-style: none; /* Removes bullet points */
+  padding: 0;
+  align-self: flex-start; /* Aligns ul to the start of the flex container */
+}
+
+.day ul li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd; /* Adds a subtle line between tasks */
+  text-align: left; /* Left-aligns the text within list items */
+}
+
+.day ul li:last-child {
+  border-bottom: none; /* Removes the border from the last item */
 }
