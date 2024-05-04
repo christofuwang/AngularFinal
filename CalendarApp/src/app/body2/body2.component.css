@@ -1,60 +1,38 @@
-/* Styles for the container holding all elements */
-.input {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 20px;
-  background-color: #ff6347;
+/* Styles for the all-tasks-container */
+.all-tasks-container {
+  max-width: 800px; /* Limits the width of the container for readability */
+  margin: 20px auto; /* Centers the container horizontally and adds vertical spacing */
+  padding: 15px; /* Adds padding inside the container */
+  background-color: #f9f9f9; /* Light background for the task list */
+  border-radius: 8px; /* Softens the corners of the container */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.options {
-  padding: 10px;
+.all-tasks-container h2 {
+  text-align: center; /* Centers the title */
 }
 
-/* Styling the dropdown and input box to be larger and visually appealing */
-input {
-  width: 300px; /* Set a larger width for both elements */
-  height: 40px; /* Increase the height for better visibility and ease of use */
-  margin-bottom: 10px; /* Adds space below each element */
-  padding: 5px 10px; /* Padding inside the elements */
-  font-size: 16px; /* Increase the font size for better readability */
-  border: 2px solid #ccc; /* Adds a light gray border */
-  border-radius: 5px; /* Rounds the corners of the input box and dropdown */
-  margin-right: 10px;
+.all-tasks-container ul {
+  list-style: none; /* Removes bullet points */
+  padding: 0; /* Removes padding to align the list properly */
 }
 
-select {
-  width: 150px;
-  height: 40px;
-  margin-bottom: 10px; /* Adds space below each element */
-  padding: 5px 10px; /* Padding inside the elements */
-  font-size: 16px; /* Increase the font size for better readability */
-  border: 2px solid #ccc; /* Adds a light gray border */
-  border-radius: 5px; /* Rounds the corners of the input box and dropdown */
-  margin-right: 10px;
+.all-tasks-container li {
+  border-bottom: 1px solid #ccc; /* Adds a separator between tasks */
+  padding: 10px; /* Adds space around the text */
+  font-size: 16px; /* Sets a readable font size */
 }
 
-/* Styling the button to be larger and with a complementary color */
-button {
-  width: 320px; /* Slightly wider than the input and dropdown to stand out */
-  height: 50px; /* Taller for easier interaction */
-  background-color: #47E3FF; /* A green shade as a complementary background */
-  color: black; /* White text color */
-  font-size: 18px; /* Larger font size for the button text */
-  border-radius: 5px; /* Rounds the corners of the button */
-  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+.all-tasks-container button {
+  margin-left: 10px; /* Space between the task description and the button */
+  padding: 5px 10px; /* Padding inside the button */
+  background-color: #007bff; /* A pleasant blue background color */
+  color: white; /* Text color for the button */
+  border: none; /* Removes the default border */
+  border-radius: 4px; /* Rounds the corners of the button */
+  cursor: pointer; /* Shows a pointer cursor on hover */
 }
 
-/* Hover effect for the button */
-button:hover {
-  background-color: #3dc7df; /* A slightly darker green on hover */
-}
-
-/* Apply basic styling to the body to remove any default margins */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif; /* Sets a clean, modern font for the content */
+.all-tasks-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover for better interaction feedback */
 }

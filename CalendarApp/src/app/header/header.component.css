@@ -20,3 +20,24 @@ h1 {
   line-height: 20vh; /* Aligns text vertically */
   color: white; /* White text for contrast */
 }
+
+.nav {
+  display: flex;  /* Establishes this div as a flex container */
+  justify-content: center;  /* Centers the flex items (buttons) horizontally in the flex container */
+  padding: 10px;  /* Adds some padding inside the nav bar */
+  background-color: #ff6347;  /* Gives the nav bar a light gray background */
+}
+
+.nav button {
+  margin: 0 10px;  /* Adds horizontal spacing between buttons */
+  padding: 8px 16px;  /* Adds padding inside each button */
+  background-color: #007bff;  /* Sets a primary color for the button */
+  color: white;  /* Sets the text color to white */
+  border: none;  /* Removes the border */
+  border-radius: 4px;  /* Rounds the corners of the buttons */
+  cursor: pointer;  /* Shows a pointer cursor on hover */
+}
+
+.nav button:hover {
+  background-color: #0056b3;  /* Changes the background color on hover for visual feedback */
+}

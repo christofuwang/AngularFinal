@@ -25,11 +25,5 @@ interface NotesByDay {
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  private noteAdded = new Subject<Note>();
-
-  noteAdded$ = this.noteAdded.asObservable();
-
-  notifyNoteAdded(note: Note) {
-    this.noteAdded.next(note);
-  }
+  title = "ToDoApp"
 }

@@ -1,6 +1,6 @@
 body, html {
   margin: 0;
-  height: 100%;
+  height: 500px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -12,6 +12,7 @@ body, html {
   display: flex;
   width: 95%;
   height: 95%; /* Adjusts height to fill 95% of the viewport */
+  margin-left: 40px;
 }
 
 .day {
@@ -49,4 +50,65 @@ body, html {
 
 .day ul li:last-child {
   border-bottom: none; /* Removes the border from the last item */
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #ff6347;
+}
+
+.options {
+  padding: 10px;
+}
+
+/* Styling the dropdown and input box to be larger and visually appealing */
+input {
+  width: 300px; /* Set a larger width for both elements */
+  height: 40px; /* Increase the height for better visibility and ease of use */
+  margin-bottom: 10px; /* Adds space below each element */
+  padding: 5px 10px; /* Padding inside the elements */
+  font-size: 16px; /* Increase the font size for better readability */
+  border: 2px solid #ccc; /* Adds a light gray border */
+  border-radius: 5px; /* Rounds the corners of the input box and dropdown */
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+select {
+  width: 150px;
+  height: 40px;
+  margin-bottom: 10px; /* Adds space below each element */
+  padding: 5px 10px; /* Padding inside the elements */
+  font-size: 16px; /* Increase the font size for better readability */
+  border: 2px solid #ccc; /* Adds a light gray border */
+  border-radius: 5px; /* Rounds the corners of the input box and dropdown */
+  margin-right: 10px;
+}
+
+/* Styling the button to be larger and with a complementary color */
+button {
+  width: 320px; /* Slightly wider than the input and dropdown to stand out */
+  height: 50px; /* Taller for easier interaction */
+  background-color: #47E3FF; /* A green shade as a complementary background */
+  color: black; /* White text color */
+  font-size: 18px; /* Larger font size for the button text */
+  border-radius: 5px; /* Rounds the corners of the button */
+  cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the button */
+button:hover {
+  background-color: #3dc7df; /* A slightly darker green on hover */
+}
+
+.delete {
+  width: 75px;
+  height: 30px;
+  font-size: 12px;
 }

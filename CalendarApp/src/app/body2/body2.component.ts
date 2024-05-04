@@ -25,63 +25,32 @@ interface NotesByDay {
   styleUrls: ['./body2.component.css']
 })
 export class Body2Component {
-  title = 'todoapp';
   readonly APIUrl = "http://localhost:5038/api/todoapp/";
-  notes: Note[] = [];
-  notesByDay: NotesByDay = {
-    sunday: [],
-    monday: [],
-    tuesday: [],
-    wednesday: [],
-    thursday: [],
-    friday: [],
-    saturday: []
-  };
+  notes: Note[] = []; // This should already be populated via your existing methods
 
-  constructor(private http: HttpClient, private appComponent: AppComponent) {}
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    this.refreshNotes();
+    this.refreshNotes(); // Fetches all notes on initialization
   }
 
   refreshNotes() {
+    // Your existing method to fetch all notes
     this.http.get<Note[]>(this.APIUrl + 'GetNotes').subscribe(data => {
       this.notes = data;
-      this.categorizeNotes();
     }, error => {
       console.error('Failed to load notes:', error);
     });
   }
 
-  categorizeNotes() {
-    this.notes.forEach(note => {
-      let day = note.day.toLowerCase();
-      if (this.notesByDay.hasOwnProperty(day)) {
-        this.notesByDay[day as keyof NotesByDay].push(note);
-      }
+  deleteNotes(id: number) {
+    // Your existing method to delete notes
+    this.http.delete(this.APIUrl + 'DeleteNotes?id=' + id).subscribe(() => {
+      // Immediately remove the note from the list upon successful deletion
+      this.notes = this.notes.filter(note => note.id !== id);
+    }, error => {
+      console.error('Failed to delete the note:', error);
     });
-  }
-
-  addNotes() {
-    var newNotes = (<HTMLInputElement>document.getElementById("newNotes")).value;
-    var dayOfWeek = (<HTMLInputElement>document.getElementById("dayOfWeek")).value;
-    var formData = new FormData();
-    formData.append("newNotes", newNotes);
-    formData.append("dayOfWeek", dayOfWeek);
-    this.http.post<Note>(this.APIUrl + 'AddNotes', formData).subscribe({
-      next: (note) => {
-        alert('Note added!');
-        this.appComponent.notifyNoteAdded(note); // Notify other components
-        this.refreshNotes();
-      },
-      error: (error) => {
-        console.error('Error adding note:', error);
-      }
-    });
-  }
-
-  reloadPage() {
-    window.location.reload();
   }
 }
 

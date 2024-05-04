@@ -1,20 +1,11 @@
 <!-- body2.component.html -->
-<div class="input">
-  <div class="options">
-    <select id="dayOfWeek">
-      <option value="sunday">Sunday</option>
-      <option value="monday">Monday</option>
-      <option value="tuesday">Tuesday</option>
-      <option value="wednesday">Wednesday</option>
-      <option value="thursday">Thursday</option>
-      <option value="friday">Friday</option>
-      <option value="saturday">Saturday</option>
-    </select>
-
-    <input id="newNotes" placeholder="Task...">
-  </div>
-  <br>
-  <button (click)="addNotes()">Add Task</button>
-  <button (click)="reloadPage()">Refresh Calendar</button>
+<div class="all-tasks-container">
+  <h2>All Tasks</h2>
+  <ul>
+    <li *ngFor="let note of notes">
+      {{ note.description }}
+      <button (click)="deleteNotes(note.id)">Complete</button>
+    </li>
+  </ul>
 </div>
 

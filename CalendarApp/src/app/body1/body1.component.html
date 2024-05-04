@@ -5,7 +5,7 @@
           <ul>
             <li *ngFor="let note of notesByDay['sunday']">
               {{note.description}}
-              <button (click)="deleteNotes(note.id)">Complete</button>
+              <button class="delete" (click)="deleteNotes(note.id)">Complete</button>
             </li>
           </ul>
       </div>
@@ -14,7 +14,7 @@
           <ul>
             <li *ngFor="let note of notesByDay['monday']">
               {{note.description}}
-              <button (click)="deleteNotes(note.id)">Complete</button>
+              <button class="delete" (click)="deleteNotes(note.id)">Complete</button>
             </li>
           </ul>
       </div>
@@ -23,7 +23,7 @@
           <ul>
             <li *ngFor="let note of notesByDay['tuesday']">
               {{note.description}}
-              <button (click)="deleteNotes(note.id)">Complete</button>
+              <button class="delete" (click)="deleteNotes(note.id)">Complete</button>
             </li>
           </ul>
       </div>
@@ -32,7 +32,7 @@
           <ul>
             <li *ngFor="let note of notesByDay['wednesday']">
               {{note.description}}
-              <button (click)="deleteNotes(note.id)">Complete</button>
+              <button class="delete" (click)="deleteNotes(note.id)">Complete</button>
             </li>
           </ul>
       </div>
@@ -41,7 +41,7 @@
           <ul>
             <li *ngFor="let note of notesByDay['thursday']">
               {{note.description}}
-              <button (click)="deleteNotes(note.id)">Complete</button>
+              <button class="delete" (click)="deleteNotes(note.id)">Complete</button>
             </li>
           </ul>
       </div>
@@ -50,7 +50,7 @@
           <ul>
             <li *ngFor="let note of notesByDay['friday']">
               {{note.description}}
-              <button (click)="deleteNotes(note.id)">Complete</button>
+              <button class="delete" (click)="deleteNotes(note.id)">Complete</button>
             </li>
           </ul>
       </div>
@@ -59,9 +59,26 @@
           <ul>
             <li *ngFor="let note of notesByDay['saturday']">
               {{note.description}}
-              <button (click)="deleteNotes(note.id)">Complete</button>
+              <button class="delete" (click)="deleteNotes(note.id)">Complete</button>
             </li>
           </ul>
       </div>
+  </div>
+
+  <div class="input">
+    <div class="options">
+      <select id="dayOfWeek">
+        <option value="sunday">Sunday</option>
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+        <option value="saturday">Saturday</option>
+      </select>
+
+      <input id="newNotes" placeholder="Task...">
+    </div>
+    <button (click)="addNotes()">Add Task</button>
   </div>
 </body>
